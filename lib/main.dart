@@ -64,7 +64,14 @@ class _UserListState extends State<UserList> {
                 return Card(
                   child: ListTile(
                     title: Text(user.name),
-                    subtitle: Text(user.email),
+                    subtitle: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Email: ${user.email}'),
+                        Text('Phone: ${user.phone}'),
+                        Text('Website: ${user.website}'),
+                      ],
+                    ),
                     // Add more fields as needed
                   ),
                 );
